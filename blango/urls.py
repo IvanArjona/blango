@@ -38,6 +38,7 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path("accounts/", include("django_registration.backends.activation.urls")),
     path("accounts/profile/", blango_auth.views.profile, name="profile"),
+    path("post-table/", blog.views.post_table, name="blog-post-table"),
     path('admin/', admin.site.urls),
     path("api/v1/", include("blog.api.urls"))
 ]
